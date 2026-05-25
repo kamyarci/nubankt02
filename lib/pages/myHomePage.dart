@@ -17,24 +17,42 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF8A19D6),
-      body: Column(
-        mainAxisAlignment: .center,
-        crossAxisAlignment: .center,
-        children: [
-          Image.asset('assets/images/logonubank.png'),
-          ElevatedButton(
-              style: TextButton.styleFrom(
-                minimumSize: Size(302, 51),
+      backgroundColor: Color(0xFF830AD1),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Expanded(
+              child: Center(
+                child: Image.asset('assets/icons/nubank-icon.png', width: 127, height: 127),
               ),
-              onPressed: trocarTela
-              , child: Text('Usar senha do celular',
-            style: GoogleFonts.poppins(
-              fontSize: 12,
-              fontWeight: .bold,
-              color: Colors.black
-            ) ,))
-        ],
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(24, 0, 24, 32),
+              child: SizedBox(
+                width: double.infinity,
+                height: 52,
+                child: ElevatedButton(
+                  onPressed: trocarTela,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    elevation: 0,
+                  ),
+                  child: Text(
+                    'Usar senha do celular',
+                    style: GoogleFonts.poppins(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xFF010302),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

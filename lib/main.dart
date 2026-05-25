@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
 
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: '/secundaria',
+      initialRoute: '/primaria',
       routes: {
         '/secundaria': (context) => const Secundaria(),
         '/primaria': (context) => const MyHomePage()
